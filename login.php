@@ -25,7 +25,7 @@ else if(empty($pass)){
 }
 
 $sql = "SELECT * FROM users WHERE user_name = $uname";
-$result = mysqli_query($con,$sql);
+$result = $con->query($sql);
 
 if(mysqli_num_rows($result)===1){
   $row=mysqli_fetch_assoc($result);
